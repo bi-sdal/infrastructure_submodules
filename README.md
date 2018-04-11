@@ -36,6 +36,18 @@ If the above works, you can install the package in the image itself
     1. Add the installation in the `mro` `Dockerfile`, e.g., `yum install -y jq-devel && \`
     2. Build the base `mro`, `rpkgs`, `rstudio`, and `shiny` images (you can use the `dbuild` command from the dockerimages setup)
     3. Push the images to dockerhub, `docker push`
+    ```bash
+    docker push sdal/mro-c7sd_auth
+    docker push sdal/rss-mro-c7sd_auth
+    docker push sdal/rpkgs-mro-c7sd_auth
+    docker push sdal/shy-mro-c7sd_auth
+    ```
 2. Do this on `lightfoot`, the production server
     1. Pull the images from dockerhub, `docker pull`
+    ```bash
+    docker pull sdal/mro-c7sd_auth
+    docker pull sdal/rss-mro-c7sd_auth
+    docker pull sdal/rpkgs-mro-c7sd_auth
+    docker pull sdal/shy-mro-c7sd_auth
+    ```
     2. Start up the rstudio containers, `docker-compose -f rstudio-compose.yml up -d --no-recreate`
