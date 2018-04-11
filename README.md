@@ -34,8 +34,8 @@ If the above works, you can install the package in the image itself
 
 1. Do this on `snowmane`, the test server
     1. Add the installation in the `mro` `Dockerfile`, e.g., `yum install -y jq-devel && \`
-    2. Build the base `mro`, `rpkgs`, `rstudio`, and `shiny` images
-    3. Push the images to dockerimages
+    2. Build the base `mro`, `rpkgs`, `rstudio`, and `shiny` images (you can use the `dbuild` command from the dockerimages setup)
+    3. Push the images to dockerhub, `docker push`
 2. Do this on `lightfoot`, the production server
-    1. Pull the images from dockerimages
-    2. Start up the rstudio containers
+    1. Pull the images from dockerhub, `docker pull`
+    2. Start up the rstudio containers, `docker-compose -f rstudio-compose.yml up -d --no-recreate`
