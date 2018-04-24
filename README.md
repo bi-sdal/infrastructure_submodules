@@ -1,6 +1,8 @@
 # infrastructure_submodules
 Components of the SDAL infrastructure (in submodule form)
 
+Porting submodules from: https://github.com/bi-sdal/dockerimages
+
 # Docker Containers
 
 ## R
